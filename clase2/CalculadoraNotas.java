@@ -6,7 +6,7 @@ public class CalculadoraNotas {
 
         System.out.print("Ingresa la primera nota: ");
         double nota1 = teclado.nextDouble();
-        if (nota1 < 0 || nota1 > 7) {
+        if (nota1 < 1 || nota1 > 7) {
             System.out.println("Nota no válida");
             teclado.close();
             return;
@@ -14,7 +14,7 @@ public class CalculadoraNotas {
 
         System.out.print("Ingresa la segunda nota: ");
         double nota2 = teclado.nextDouble();
-        if (nota2 < 0 || nota2 > 7) {
+        if (nota2 < 1 || nota2 > 7) {
             System.out.println("Nota no válida");
             teclado.close();
             return;
@@ -22,7 +22,7 @@ public class CalculadoraNotas {
 
         System.out.print("Ingresa la tercera nota: ");
         double nota3 = teclado.nextDouble();
-        if (nota3 < 0 || nota3 > 7) {
+        if (nota3 < 1 || nota3 > 7) {
             System.out.println("Nota no válida");
             teclado.close();
             return;
@@ -31,15 +31,11 @@ public class CalculadoraNotas {
         double promedio = (nota1 + nota2 + nota3) / 3;
         System.out.println("El promedio es: " + promedio);
 
-        switch ((int) promedio)        
-        {
-            case >= 4:
-                System.out.println("Aprobado");
-                break;
-            case < 4:
-                System.out.println("Reprobado");
-                break;
-        }  
+        if (promedio >= 4.0) {
+            System.out.println("Aprobado");
+        } else {
+            System.out.println("Reprobado");
+        }
 
         teclado.close();
     }
